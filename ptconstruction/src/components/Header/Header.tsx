@@ -1,5 +1,4 @@
 import * as React from "react";
-import { Route, Switch, BrowserRouter } from "react-router-dom";
 import {
     AppBar,
     Toolbar,
@@ -9,18 +8,17 @@ import {
     ListItemText,
     Container
 } from "@material-ui/core";
-import Home from "../../pages/Home/Home";
-import Residential from '../../pages/Residential/Residential';
-import ContactUs from '../../pages/ContactUs/ContactUs';
-import AboutUs from '../../pages/AboutUs/AboutUs';
-import Commercial from '../../pages/Commercial/Commercial';
 import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
+        navbar: {
+            backgroundColor: 'white',
+        },
         navbarDisplayFlex: {
             display: `flex`,
             justifyContent: `space-between`,
+            color: 'grey',
         },
         navDisplayFlex: {
             display: `flex`,
@@ -29,7 +27,7 @@ const useStyles = makeStyles((theme: Theme) =>
         linkText: {
             textDecoration: `none`,
             textTransform: `uppercase`,
-            color: `white`
+            color: 'grey',
         },
         title: {
             display: 'flex',
@@ -42,7 +40,7 @@ const useStyles = makeStyles((theme: Theme) =>
     }));
 
 const navLinks = [
-    { title: `home`, path: `/` },
+    { title: `home`, path: `/home` },
     { title: `residential`, path: `/residential` },
     { title: `commercial`, path: `/commercial` },
     { title: `about us`, path: `/about-us` },
@@ -53,7 +51,7 @@ const Header = () => {
     const classes = useStyles();
 
     return (
-        <AppBar position="static">
+        <AppBar position="static" className={classes.navbar}>
             <Toolbar>
                 <Container maxWidth="lg" className={classes.navbarDisplayFlex}>
                     <div>
