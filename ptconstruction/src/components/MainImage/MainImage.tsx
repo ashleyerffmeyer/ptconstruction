@@ -1,8 +1,7 @@
 import React from 'react';
-import { Container } from "@material-ui/core";
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import flw from "../../assets/flw.jpg";
+import flw from '../../assets/flw.jpg';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({

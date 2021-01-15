@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         navbar: {
             backgroundColor: 'white',
+            position: 'fixed',
         },
         navbarDisplayFlex: {
             display: `flex`,
@@ -28,10 +29,12 @@ const useStyles = makeStyles((theme: Theme) =>
             textDecoration: `none`,
             textTransform: `uppercase`,
             color: 'grey',
+            marginTop: theme.spacing(2),
         },
         title: {
             display: 'flex',
-            marginTop: theme.spacing(2),
+            marginTop: theme.spacing(3.5),
+            marginBottom: theme.spacing(3),
             justifyContent: `space-between`,
             [theme.breakpoints.up('sm')]: {
                 display: 'block',
